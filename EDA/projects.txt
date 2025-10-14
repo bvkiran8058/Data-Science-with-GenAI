@@ -1,0 +1,186 @@
+Perfect 🎯 — since you already know **Python, Pandas, NumPy, and Matplotlib**, we’ll move straight into **hands-on EDA practice**, structured **step-by-step** from **Beginner → Intermediate → Advanced**.
+
+This roadmap will not only strengthen your EDA logic but also make you confident for data science interviews or projects.
+
+---
+
+## 🧭 Step-by-Step EDA Practice Projects (Beginner → Advanced)
+
+---
+
+### 🌱 **Stage 1: Beginner Level (Learn the EDA Framework)**
+
+**Goal:** Build EDA discipline — knowing what to look for, how to summarize, and visualize.
+
+#### 🧩 Dataset 1: *Titanic Dataset* (Kaggle)
+
+**Concepts practiced:**
+
+* Data loading and inspection (`.info()`, `.describe()`, `.isnull()`)
+* Handling missing values
+* Univariate analysis (histograms, bar plots)
+* Bivariate analysis (e.g., survival vs. gender/class)
+* Feature correlation heatmap
+* Outlier detection using boxplots
+
+**Tasks:**
+
+1. Load dataset from CSV
+2. Print shape, datatypes, and missing values
+3. Handle nulls (fill/replace/remove)
+4. Visualize:
+
+   * Count of survivors by gender
+   * Age distribution
+   * Correlation heatmap
+5. Write 3–5 insights at the end.
+
+---
+
+#### 🧩 Dataset 2: *Iris Dataset*
+
+**Concepts practiced:**
+
+* Basic summary statistics
+* Pairwise feature relationships (`sns.pairplot`)
+* Class-wise comparison (setosa, versicolor, virginica)
+
+**Tasks:**
+
+1. Load from `sklearn.datasets` or CSV
+2. Compare means of features per species
+3. Plot pairplot, violin plots
+4. Draw conclusions about class separability.
+
+---
+
+### 🌿 **Stage 2: Intermediate Level (Wrangling + Visualization)**
+
+**Goal:** Handle messy data and uncover patterns across numeric + categorical variables.
+
+#### 🧩 Dataset 3: *Netflix Titles Dataset* (Kaggle)
+
+**Concepts practiced:**
+
+* Date-time feature extraction
+* Text columns cleaning (split, strip, extract)
+* Feature engineering (e.g., “Year added”, “Country count”)
+* Countplots, pie charts, and word frequency plots
+* Data aggregation (`groupby`, `pivot_table`)
+
+**Tasks:**
+
+1. Load data and parse “date_added” to datetime
+2. Extract year, month, and visualize number of releases per year
+3. Find top 10 countries producing content
+4. Plot movie vs. TV show ratio
+5. Create word cloud for directors/genres.
+
+---
+
+#### 🧩 Dataset 4: *Supermarket Sales Data*
+
+**Concepts practiced:**
+
+* Handling duplicates, outliers, and inconsistent entries
+* Customer behavior and sales trends
+* Grouped visualizations and percentage analysis
+
+**Tasks:**
+
+1. Analyze total sales by gender and branch
+2. Check average rating per branch
+3. Find correlation between total amount and quantity
+4. Monthly sales trend line chart
+5. Detect any anomalies in sales using boxplots.
+
+---
+
+### 🌾 **Stage 3: Advanced Level (Real-world messy EDA)**
+
+**Goal:** Simulate industry-level exploratory analysis and storytelling with data.
+
+#### 🧩 Dataset 5: *House Prices (Kaggle)*
+
+**Concepts practiced:**
+
+* Advanced correlation analysis
+* Feature transformation (log scaling, encoding)
+* Handling multicollinearity
+* Outlier treatment using IQR
+* Hypothesis-driven EDA
+
+**Tasks:**
+
+1. Explore numeric vs. categorical features
+2. Identify top correlated features with sale price
+3. Visualize continuous variables (scatterplots, KDEs)
+4. Create correlation heatmap for top 10 features
+5. Write hypothesis-driven insights (e.g., “Larger houses in certain neighborhoods sell for more”).
+
+---
+
+#### 🧩 Dataset 6: *COVID-19 Global Dataset*
+
+**Concepts practiced:**
+
+* Multi-source data merging (e.g., cases + population)
+* Time-series EDA
+* Rolling averages, trend detection
+* Geographic data visualization (optional with `plotly` or `folium`)
+
+**Tasks:**
+
+1. Analyze trend of confirmed cases and deaths per country
+2. Compute and visualize death rate by continent
+3. Plot top 10 affected countries over time
+4. Draw insights on containment success.
+
+---
+
+### 🌾 **Stage 4: Expert Level (End-to-End EDA + Storytelling)**
+
+**Goal:** Combine cleaning, analysis, visualization, and presentation into one narrative.
+
+#### 🧩 Dataset 7: *Indian Startup Funding Dataset*
+
+**Concepts practiced:**
+
+* Text normalization and regex cleaning
+* Entity standardization (e.g., merging “Flipkart” & “Flipkart.com”)
+* Temporal trend analysis
+* Multi-variable EDA + storytelling
+* Presenting insights as a report (Jupyter Notebook Markdown + visuals)
+
+**Tasks:**
+
+1. Clean investor names and company names
+2. Extract funding rounds and amounts
+3. Find which sector got most funding each year
+4. Analyze trends in funding growth by city
+5. End with a dashboard-style notebook of plots and insights.
+
+---
+
+## 🧰 Optional Tools to Add at Any Stage
+
+| Tool                  | Use                                       |
+| --------------------- | ----------------------------------------- |
+| **Seaborn**           | High-level, beautiful visualization       |
+| **Plotly / Dash**     | Interactive dashboards                    |
+| **pandas-profiling**  | Auto EDA summary                          |
+| **Sweetviz / D-Tale** | Visual summary and variable relationships |
+| **Missingno**         | Visual missing data patterns              |
+
+---
+
+## 🧠 Suggested Learning Flow
+
+1. Do **Titanic** (warm-up, clean process).
+2. Then **Netflix / Supermarket** (intermediate, messy data).
+3. Move to **House Prices / COVID-19** (advanced statistical + time-series analysis).
+4. Finally, **Indian Startup Funding** (storytelling project).
+
+---
+
+Would you like me to start you with **Stage 1 (Titanic Dataset)** and guide you **step-by-step** through real EDA — from loading to final insights (you’ll do the code, I’ll guide the logic)?
