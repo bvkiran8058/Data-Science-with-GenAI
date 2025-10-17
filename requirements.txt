@@ -1,0 +1,11 @@
+# Data processing
+pandas
+numpy
+
+# Data visualisation
+matplotlib
+seaborn
+wordcloud
+
+# others
+jupyter
