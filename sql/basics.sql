@@ -26,12 +26,59 @@ CREATE TABLE employee_table(
 ); 
 SHOW TABLES;  
 describe employee_table;
-
+-- Adding new column with help of ALTER and ADD
 ALTER TABLE employee_table
-ADD Emp_sal int not Null
+ADD Emp_sal int not Null;
 
 ALTER TABLE employee_table  
 ADD emp_address varchar(100) NOT NULL  
 AFTER name,  
+
 ADD mobile_no int(100) NOT NULL  
 AFTER age ;  
+
+-- Modifying column with help of ALTER and MODIFY
+ALTER TABLE employee_table  
+MODIFY name varchar(50) NULL;  
+
+-- Dropping column with help of ALTER and DROP
+ALTER TABLE employee_table 
+DROP COLUMN age; 
+
+-- adding again
+ALTER TABLE employee_table
+add column age int not null
+after name;
+describe employee_table;
+
+-- rename column in table with ALTER and CHANGE
+ALTER TABLE employee_table
+change column age emp_age int(10) not null;
+
+-- rename table name with ALTER and RENAME
+ALTER TABLE employee_table
+rename Employee_Details;
+
+SHOW tables;
+describe Employee_Details;
+
+-- Inserting data into tables
+create table PEOPLE(
+id int not null auto_increment,
+name varchar(50) not null,
+occupation varchar(50) not null,
+age int,
+primary key (id)
+);
+
+INSERT INTO People (id, name, occupation, age)   
+VALUES (101, 'Peter', 'Engineer', 32); 
+
+select * FROM PEOPLE;
+INSERT INTO People VALUES  
+(102, 'Joseph', 'Developer', 30),  
+(103, 'Mike', 'Leader', 28),  
+(104, 'Stephen', 'Scientist', 45);
+
+INSERT INTO People (name, occupation)   
+VALUES ('Stephen', 'Scientist'), ('Bob', 'Actor');  
