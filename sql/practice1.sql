@@ -74,3 +74,30 @@ rename employee_details;
 -- Add a new column email (VARCHAR(100)) to the employee_details table.
 alter table employee_details
 add column email varchar(100);
+
+-- Modify the data type of salary column to DECIMAL(12,2)
+alter table employee_details
+modify column salary decimal(12,2);
+
+describe employee_details;
+
+-- Drop the column job_title from employee_details
+alter table employee_details
+drop column job_title;
+
+-- Add it back again with the same name and datatype.
+alter table employee_details
+add column job_title varchar(50)
+after emp_name;
+
+-- Rename the column emp_name to employee_name
+alter table employee_details
+rename column emp_name to employee_name;
+
+/*
+Drop the table projects.
+Recreate it again with the same structure.
+used same query to recreate*/
+
+drop table projects;
+show tables;
