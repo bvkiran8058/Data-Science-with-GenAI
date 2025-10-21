@@ -81,4 +81,27 @@ INSERT INTO People VALUES
 (104, 'Stephen', 'Scientist', 45);
 
 INSERT INTO People (name, occupation)   
-VALUES ('Stephen', 'Scientist'), ('Bob', 'Actor');  
+VALUES ('Stephen', 'Scientist'), ('Bob', 'Actor'); 
+
+show databases;
+use employeedb;
+show tables;
+describe people;
+
+alter table people
+add column joining_date date;
+describe people;
+
+select * from people;
+
+insert into People values(107,'Ojus','Engineer',27,'2018-09-04');
+
+insert into People values(108,'Pramod','Engineer',27,'2024-12-01');
+
+update people 
+set joining_date = '2024/03/11'
+where id = 102;
+
+UPDATE People    
+SET Joining_Date = '2025/01/01'    
+WHERE name ='Bob';
