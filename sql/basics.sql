@@ -113,3 +113,6 @@ SET Joining_Date = '2025/09/11'
 WHERE name ='Stephen';
 
 delete from people where name = 'Stephen';
+use employeedb;
+show tables;
+describe people;
