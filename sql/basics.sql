@@ -103,5 +103,13 @@ set joining_date = '2024/03/11'
 where id = 102;
 
 UPDATE People    
-SET Joining_Date = '2025/01/01'    
-WHERE name ='Bob';
+SET Joining_Date = '2025/09/01'    
+WHERE id =106;
+
+SET SQL_SAFE_UPDATES = 0;
+
+UPDATE People    
+SET Joining_Date = '2025/09/11'    
+WHERE name ='Stephen';
+
+delete from people where name = 'Stephen';
