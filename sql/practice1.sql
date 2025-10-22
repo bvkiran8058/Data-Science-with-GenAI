@@ -172,3 +172,50 @@ where employee_name like "A%";
 -- Retrieve all employees working in department ID 1.
 select * from employee_details
 where dept_id = 1;
+
+-- List all employees with NULL joining dates.
+select * from employee_details
+where joining_date is null;
+
+-- 4. Updating Data
+-- Update the salary of one employee to 90000.
+SET SQL_SAFE_UPDATES = 0;
+
+update employee_details
+set salary = 90000
+where employee_name = 'Arjun Mehta';
+
+-- Change the dept_id of all employees working in IT to 3.
+update employee_details
+set dept_id = 3
+where job_title = 'IT';
+
+-- Increase every employee’s salary by 10%
+update employee_details
+set salary = salary * 1.10;
+
+-- 5. Deleting Data
+-- Delete all employees with salary less than 40000.
+delete from employee_details
+where salary < 40000;
+
+-- Delete all data from employee_details but keep the structure.
+delete from employee_details;
+
+-- Delete the entire departments table.
+drop table departments;
+show tables;
+
+-- Bonus Alter Challenges
+-- Add a new column manager_id in employee_details.
+alter table employee_details
+add column manager_id int;
+
+describe employee_details;
+
+alter table employee_details
+drop email;
+
+-- Add a column performance_rating (INT) with a default value.
+alter table employee_details
+add column performance_rating int default 3;
