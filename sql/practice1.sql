@@ -101,3 +101,74 @@ used same query to recreate*/
 
 drop table projects;
 show tables;
+describe employee_details;
+select * from employee_details;
+-- 2 Insert Records
+insert into employee_details values
+(1, 'Arjun Mehta', 'Software Engineer', 75000, 1, '2022-06-15', 'arjun@mehta.com'),
+(2, 'Sneha Reddy', 'HR Executive', 55000, 2, '2022-02-01', 'sneha@reddy.com');
+
+insert into employee_details (employee_name, job_title, salary, dept_id, joining_date, email)
+values ('Rahul Nair', 'Data Analyst', 67000, 1, '2021-12-10', 'rahul@nair.com');
+
+INSERT INTO employee_details (employee_name, job_title, salary, dept_id, joining_date, email)
+VALUES
+('Priya Das', 'Marketing Manager', 85000, 3, '2020-08-05', 'priya@das.com'),
+('Dev Patel', 'Accountant', 50000, 4, '2024-01-20', 'dev@patel.com');
+
+INSERT INTO departments
+VALUES
+(1, 'IT', 'Bangalore'),
+(2, 'Human Resources', 'Hyderabad'),
+(3, 'Marketing', 'Mumbai'),
+(4, 'Finance', 'Delhi');
+
+INSERT INTO departments (dept_id, dept_name, location)
+VALUES
+(5, 'Operations', 'Chennai');
+
+INSERT INTO projects (project_id, project_name, start_date, end_date, emp_id)
+VALUES
+(1, 'Website Redesign', '2023-01-15', '2023-06-30', 1),
+(2, 'Recruitment Drive', '2023-03-01', '2023-04-30', 2),
+(3, 'Data Migration', '2022-11-01', '2023-02-15', 3),
+(4, 'Ad Campaign', '2023-05-10', '2023-09-01', 4),
+(5, 'Budget Planning', '2024-01-01', '2024-03-31', 5);
+
+SELECT * FROM employee_details;
+SELECT * FROM departments;
+SELECT * FROM projects;
+
+-- Data retrieval
+-- Display only employee_name and salary columns.
+select employee_name, salary
+from employee_details;
+
+-- Show employees who joined after 2023-01-01.
+select * from employee_details
+where joining_date > '2023-01-01';
+
+-- List employees whose salary is greater than 60000.
+select * from employee_details
+where salary > 60000;
+
+-- Display employees sorted by their salary in descending order.
+select * from employee_details
+order by salary desc;
+
+-- Show only distinct department IDs.
+select distinct dept_id 
+from employee_details;
+
+-- Retrieve the top 3 highest paid employees.
+SELECT * FROM employee_details
+ORDER BY salary DESC
+LIMIT 3;
+
+-- Find all employees whose names start with “A”.
+select * from employee_details
+where employee_name like "A%";
+
+-- Retrieve all employees working in department ID 1.
+select * from employee_details
+where dept_id = 1;
