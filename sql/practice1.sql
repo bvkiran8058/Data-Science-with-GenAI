@@ -219,3 +219,9 @@ drop email;
 -- Add a column performance_rating (INT) with a default value.
 alter table employee_details
 add column performance_rating int default 3;
+
+-- Rename the table employee_details back to employees
+alter table employee_details
+rename employees;
+
+show tables;
