@@ -65,10 +65,6 @@ Welcome to the **Data-Science-with-GenAI** repository! This project provides pra
 
 Contributions are welcome! If you have improvements, additional notebooks, or corrections, please open a pull request or submit an issue.
 
-## 📄 License
-
-This repository is open source. Please review the LICENSE file (add one if needed) for details.
-
 ***
 
 **Note:**  
