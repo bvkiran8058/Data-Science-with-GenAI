@@ -116,3 +116,15 @@ delete from people where name = 'Stephen';
 use employeedb;
 show tables;
 describe people;
+
+-- for checking
+show databases;
+use employeedb;
+show tables;
+select * from people;
+-- for checking
+insert into people values
+(111, 'Arjun Mehta', 'Software Engineer', 28, '2022-06-15'),
+( 112, 'Sneha Reddy', 'HR Executive', 29, '2022-02-01');
+
+select distinct name from people;
