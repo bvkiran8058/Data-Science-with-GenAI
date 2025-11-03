@@ -126,6 +126,55 @@ add column grade varchar(2) default "A";
 -- 7. Rename table students → student_details.
 rename table students to student_details;
 describe student_details;
+-- 8. Add a foreign key to dept_id from departments.
 alter table student_details
-add column dept_id int 
-add constraints foreign key(departments);
+add column dept_id int;
+alter table student_details
+add constraint dept_id 
+foreign key (dept_id) references departments(dept_id);
+
+/*
+💣 Section D — DROP, TRUNCATE & RENAME
+*/
+-- 1. Create a table old_records with any 3 columns.
+create table old_records(
+record_no int auto_increment,
+stu_name varchar(50), 
+age int check (age > 18),
+primary key(record_no)
+);
+-- 2. Insert some data.
+insert into old_records (stu_name, age)
+values
+	("John", 19),
+    ("Mitchel", 19);
+-- 3. Use TRUNCATE to remove all rows — verify that the structure remains
+truncate table old_records;
+-- 4. Drop table old_records.
+drop table old_records;
+-- 5. Rename student_details back to students.
+rename table student_details to students;
+
+/*
+📑 Section E — DDL Constraints Practice
+Create a table named employee_data with the following structure:
+
+Column	Datatype	Constraint
+emp_id	INT	PRIMARY KEY
+emp_name	VARCHAR(50)	NOT NULL
+dept_id	INT	FOREIGN KEY REFERENCES departments(dept_id)
+salary	DECIMAL(10,2)	CHECK (salary > 0)
+hire_date	DATE	DEFAULT (current date)
+email	VARCHAR(100)	UNIQUE
+*/
+
+create table employee_data(
+emp_id int auto_increment,
+emp_name varchar(50) not null,
+dept_id int,
+salary decimal(10,2) check(salary>0),
+hire_date date default (curdate()),
+email varchar(100) unique,
+primary key(emp_id),
+foreign key (dept_id) references departments(dept_id)
+);
