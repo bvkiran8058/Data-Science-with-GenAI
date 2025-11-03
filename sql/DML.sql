@@ -117,3 +117,15 @@ rename column name to student_name;
 -- 4. Change datatype of email from VARCHAR(100) to VARCHAR(150).
 alter table students
 modify column email varchar(150);
+-- 5. Drop column admission_date.
+alter table students
+drop column admission_date;
+-- 6. Add a column grade CHAR(2) with a default value 'A'.
+alter table students
+add column grade varchar(2) default "A";
+-- 7. Rename table students → student_details.
+rename table students to student_details;
+describe student_details;
+alter table student_details
+add column dept_id int 
+add constraints foreign key(departments);
