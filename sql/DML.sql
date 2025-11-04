@@ -167,7 +167,8 @@ salary	DECIMAL(10,2)	CHECK (salary > 0)
 hire_date	DATE	DEFAULT (current date)
 email	VARCHAR(100)	UNIQUE
 */
-
+use collegedb;
+show tables;
 create table employee_data(
 emp_id int auto_increment,
 emp_name varchar(50) not null,
@@ -178,3 +179,21 @@ email varchar(100) unique,
 primary key(emp_id),
 foreign key (dept_id) references departments(dept_id)
 );
+-- 2. Drop the CHECK constraint.
+SELECT CONSTRAINT_NAME
+FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS
+WHERE TABLE_NAME = 'employee_data'
+  AND CONSTRAINT_TYPE = 'CHECK';
+ALTER TABLE employee_data
+DROP CHECK employee_data_chk_1;
+describe employee_data;
+-- 3. Add a new column performance_rating INT DEFAULT 5.
+alter table employee_data
+add column performance_rating INT DEFAULT 5;
+-- 4. Add a UNIQUE constraint on emp_name and dept_id together.
+ALTER TABLE employee_data
+ADD CONSTRAINT emp_dept_unique
+UNIQUE (emp_name, dept_id);
+-- 5. Drop the DEFAULT constraint on hire_date.
+alter table employee_data
+alter column hire_date drop default;
