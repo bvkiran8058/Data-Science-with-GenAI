@@ -197,3 +197,7 @@ UNIQUE (emp_name, dept_id);
 -- 5. Drop the DEFAULT constraint on hire_date.
 alter table employee_data
 alter column hire_date drop default;
+
+/*
+📊 Section F — CREATE VIEW, INDEX, SEQUENCE, SYNONYM
+*/
